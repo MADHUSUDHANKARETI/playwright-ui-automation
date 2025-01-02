@@ -11,3 +11,6 @@ test('DemoQA', async ({page}) => {
 
     //await expect(await page.locator("//input[@type='checkbox'][2]")).toBeChecked()
 })
+
+
+
