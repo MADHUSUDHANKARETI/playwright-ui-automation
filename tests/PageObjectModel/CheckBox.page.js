@@ -15,7 +15,7 @@ exports.CheckBox =
             this.clicksaturday = '#saturday'
         }
             async clickcheckbox() {
-            await this.page.locator(this.clicksunday).check()
+            await this.page.locator(this.clicksunday).uncheck()
             await this.page.locator(this.clickmonday).check()
             await this.page.locator(this.clicktuesday).check()
             await this.page.locator(this.clickwednesday).check()
@@ -26,7 +26,7 @@ exports.CheckBox =
         }
         async assertionMonday() {
             await expect(this.clicksunday).isChecked().toBeTruthy()
-            await this.page.locator(this.clicksunday).uncheck()
+            await this.page.locator(this.clicksunday).check()
             await expect(this.clicksunday).isChecked().toBeFalsy()
             
           }
